@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  dev:
+    build:
+      context: ./
+    image: muccg/blasr:${BUILD_VERSION}
+
+  latest:
+    extends:
+      file: docker-compose-build.yml
+      service: dev
+    image: muccg/blasr:latest

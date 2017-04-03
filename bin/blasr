@@ -1,0 +1,9 @@
+#!/bin/bash
+blasr="docker run --rm \
+                   --interactive \
+                   --tty \
+                   -v "$(pwd):$(pwd)" \
+                   -w $(pwd) \
+                   -it muccg/blasr"
+
+exec $blasr "$@"
