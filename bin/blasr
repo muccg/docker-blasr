@@ -2,6 +2,7 @@
 blasr="docker run --rm \
                    --interactive \
                    --tty \
+                   -e "LOCAL_USER_ID=$(id -u)" \
                    -v "$(pwd):$(pwd)" \
                    -w $(pwd) \
                    -it muccg/blasr"
